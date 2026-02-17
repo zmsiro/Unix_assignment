@@ -1,0 +1,6 @@
+working/
+output/
+*.log
+debug.log
+run.log
+transposed_genotypes.txt
