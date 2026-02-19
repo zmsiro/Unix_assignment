@@ -42,8 +42,6 @@ head -n 1 snp_position.txt | cut -f1-4
 
 # Full pipeline:
 
-set -euo pipefail
-
 rm -rf working output
 mkdir -p working output/maize output/teosinte output/special
 
