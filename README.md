@@ -121,7 +121,7 @@ for chr in {1..10}; do
 
   (head -n 1 working/maize_ready.txt && \
    awk -F $'\t' -v c="$chr" 'NR>1 && $2==c' working/maize_ready.txt \
-   | sort -t $'\t' -k3,3nr | sed 's/NA/-/g') \
+   | sort -t $'\t' -k3,3nr | sed 's#\?/\?#-#g') \
   > output/maize/maize_chr${chr}_decreasing.txt
 done
 
@@ -134,7 +134,7 @@ for chr in {1..10}; do
 
   (head -n 1 working/teosinte_ready.txt && \
    awk -F $'\t' -v c="$chr" 'NR>1 && $2==c' working/teosinte_ready.txt \
-   | sort -t $'\t' -k3,3nr | sed 's/NA/-/g') \
+   | sort -t $'\t' -k3,3nr | sed 's#\?/\?#-#g') \
   > output/teosinte/teosinte_chr${chr}_decreasing.txt
 done
 
