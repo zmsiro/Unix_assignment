@@ -1,5 +1,4 @@
-working/
-output/
+
 *.log
 debug.log
 run.log
